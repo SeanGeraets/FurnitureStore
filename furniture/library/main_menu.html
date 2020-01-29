@@ -1,0 +1,114 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="index.php">Comfort</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
+      </li>
+	  <!--start drop down-->
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Living Room
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <?php 
+			$item_list = array('Couches','Chairs', 'Loveseats', 'Tables', 'Desks', 'TV Cabinets', 'Lamps');
+		  
+		  foreach($item_list as $x) {
+		  
+			echo '<a class="dropdown-item" href="'.str_replace(' ', '', strtolower('page_builder')).'.php?id='.strtolower($x).'">'.$x.'</a>';
+			
+			}
+		?>
+		  
+        </div>
+      </li>
+	  <!-- End Drop Down-->
+	  	  <!--start drop down-->
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Kitchen
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <?php
+
+$my_menu = fopen('library/kitchen_list.txt', 'r') or die('');		
+		  
+		while(!feof($my_menu)) {
+			$link = fgets($my_menu);
+			echo '<a class="dropdown-item" href="'; 
+			echo str_replace(' ', '', strtolower('page_builder'));
+			echo '.php?id='.strtolower($link).'">'.$link.'</a>';
+			}
+			?>
+		  
+        </div>
+      </li>
+	  <!-- End Drop Down-->
+	  	  <!--start drop down-->
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Bedroom
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          
+		<?php 
+/* 
+this is an example of 
+a whole menu build, 
+with just one field 
+*/		
+		require('user_menu.php');	  
+		  
+		  ?>
+        </div>
+      </li>
+	  <!-- End Drop Down-->
+	  	  <!--start drop down-->
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Bathroom
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Action</a>
+        </div>
+      </li>
+	  <!-- End Drop Down-->
+	  	  <!--start drop down-->
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Dining Room
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Action</a>
+        </div>
+      </li>
+	  <!-- End Drop Down-->
+	  	  <!--start drop down-->
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Outdoor
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Action</a>
+        </div>
+      </li>
+	  <!-- End Drop Down-->
+    </ul>
+  </div>
+</nav>
+
+<!-- 
+Divider if we want it, goes between <a> nav items
+<div class="dropdown-divider"></div>
+-->
+
+<!-- generic link
+<li class="nav-item">
+    <a class="nav-link" href="#">Link</a>
+</li>
+-->

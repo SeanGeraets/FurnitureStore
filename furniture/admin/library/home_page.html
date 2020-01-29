@@ -1,0 +1,38 @@
+<body>
+	<main class="container">
+		<header>
+			<?php require('header_sec.html'); ?>
+		</header>
+		
+		<?php require('main_menu.html'); ?>
+		
+		<div class="main_content">
+			
+		<?php
+
+		if(isset($_SESSION['admin'])) {
+		
+			echo 'hello - admin';
+		
+		} else if (isset($_SESSION['user'])) {
+		 
+			echo 'hello - user';
+		
+		} else {
+		
+			require('carousel.html'); 
+			require('home_page_products.html');
+			require('our_story.html');
+			//require('something....later');
+			//require('something....later');		
+			
+		}
+			
+		?>
+		</div>
+		<?php require('footer.html');?>
+	</main>
+</body>
+<!-- Ends Body -->
+</html>
+<!-- Starts HTML Page -->

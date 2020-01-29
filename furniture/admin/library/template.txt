@@ -1,0 +1,41 @@
+<!-- Starts Page -->
+	<!-- Starts Head Section -->
+<!doctype html>
+	<html lang="en-US">
+	<head>
+		<title>OO - PHP - Unit 1</title>
+		<meta charset="utf-8">
+		<meta name="author" content="Mark W. Bromwich">
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<script src="js/jquery.js"></script>
+		<script src="js/bootstrap.js"></script>
+		
+		<link href="css/normalize.css" rel="stylesheet">
+		<link href="css/bootstrap.css" rel="stylesheet">
+		<link href="css/main_style.css" rel="stylesheet">
+	</head>
+	<!-- Ends Head Section -->
+<!-- Starts Body-->
+<body>
+	<main class="container">
+		<header>
+			<h1>Banner Section</h1>
+		</header>
+		<nav>
+			<h2>Navigation Section</h2>
+		</nav>
+		<div class="main_content">
+			<article></article>
+			<aside></aside>
+			<section></section>
+		</div>
+		<footer>
+			<h2>Footer</h2>
+		</footer>
+	</main>
+</body>
+<!-- Ends Body -->
+</html>
+<!-- Starts HTML Page -->
